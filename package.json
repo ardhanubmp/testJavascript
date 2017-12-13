@@ -1,0 +1,21 @@
+{
+  "name": "dealbareng",
+  "version": "1.0.0",
+  "description": "dealbareng js and css",
+  "private": true,
+  "devDependencies": {
+    "del": "^2.2.2",
+    "force": "0.0.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "*",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.11.0",
+    "gulp-uglify": "^2.0.1",
+    "node-sass": "^3.4.2"
+  },
+  "dependencies": {}
+}

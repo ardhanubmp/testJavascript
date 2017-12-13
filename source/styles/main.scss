@@ -1,0 +1,63 @@
+$big-screen: 1200px;
+$medium-screen: 992px;
+$vga: 1024px;
+$small-screen: 768px;
+$mobile: 426px;
+
+// transition
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+//shadow
+@mixin box-shadow($horizontal, $vertical, $blur, $color) {
+  -webkit-box-shadow: $horizontal $vertical $blur $color;
+  -moz-box-shadow: $horizontal $vertical $blur $color;
+  box-shadow: $horizontal $vertical $blur $color;
+}
+@mixin inset-box-shadow($horizontal, $vertical, $blur, $color) {
+  -webkit-box-shadow: inset $horizontal $vertical $blur $color;
+  -moz-box-shadow: inset $horizontal $vertical $blur $color;
+  box-shadow: inset $horizontal $vertical $blur $color;
+}
+
+/**
+ * Convert font-size from px to rem with px fallback
+ * @param $size - the value in pixel you want to convert
+ * e.g. p {@include fontSize(12px);}
+ *
+ */
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+//Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
+}
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+html, body{
+	height: 100%;
+	font-family: Roboto, Helvetica, arial, sans;
+}
+.center {
+    margin: auto;
+    width: 425px;
+}
+#searchBox{
+  width: 100%;
+  height: 30px;
+}
+table{
+  .katalog{
+    tr{
+      width: 50%;
+    }
+  }
+}
